@@ -28,12 +28,15 @@ public class CustomPreViewCamera extends SurfaceView implements SurfaceHolder.Ca
 
     private static final String TAG = CustomPreViewCamera.class.getSimpleName();
     private Context mContext;
+    //取景控制器
     private SurfaceHolder holder;
     private Camera mCamera;
-    private int screenWidth;
-    private int screenHeight;
+    //屏幕宽高
+    private int screenWidth,screenHeight;
+    //是否正在录像
     private boolean isRecording = false;
     private MediaRecorder mediaRecorder;
+    //相机id=0 前置 1：后置
     private int mCameraID = 0;
 
     public CustomPreViewCamera(Context context) {
@@ -65,7 +68,7 @@ public class CustomPreViewCamera extends SurfaceView implements SurfaceHolder.Ca
 //                mCamera = Camera.open();
             }
             if (mCamera != null) {
-                //通過控制器設置預覽顯示  一定要設置，否則黑屏
+                //通過控制器設置預覽顯示（通过surfaceview显示取景画面）  一定要設置，否則黑屏
                 mCamera.setPreviewDisplay(holder);
                 setCameraParameter();
                 //开启预览界面，开启之前可设置相机一系列参数 如预览界面大小，相机拍摄大小，相机方向
@@ -76,6 +79,9 @@ public class CustomPreViewCamera extends SurfaceView implements SurfaceHolder.Ca
         }
     }
 
+    /*
+        surface创建时调用
+     */
     @Override
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
         if (mCamera != null) {
@@ -84,6 +90,9 @@ public class CustomPreViewCamera extends SurfaceView implements SurfaceHolder.Ca
         }
     }
 
+    /*
+        surface销毁时调用
+     */
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
         if (mCamera != null) {
