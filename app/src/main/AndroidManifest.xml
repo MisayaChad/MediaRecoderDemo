@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.demo.chad.mediarecoderdemo" >
+    <!-- 相机权限 -->
     <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 外部存储卡写权限（sd卡）-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 录制音视频权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <application
         android:allowBackup="true"
