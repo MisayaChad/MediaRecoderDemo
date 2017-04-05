@@ -11,6 +11,9 @@ import android.widget.FrameLayout;
 
 import com.demo.chad.view.CustomPreViewCamera;
 
+/**
+ * Created by Chad on 2017/3/28.
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private HandlerThread cameraPreViewHandleThread;

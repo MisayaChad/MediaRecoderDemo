@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by YoHann on 2017/3/28.
+ * Created by Chad on 2017/3/28.
  */
 
 public class CustomPreViewCamera extends SurfaceView implements SurfaceHolder.Callback {
