@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:text="录像"
             android:textSize="14sp"
+            android:textColor="@android:color/black"
             android:background="@android:color/transparent"/>
     </RelativeLayout>
 </LinearLayout>
